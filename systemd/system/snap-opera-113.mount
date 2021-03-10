@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for opera, revision 113
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/opera_113.snap
+Where=/snap/opera/113
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target
